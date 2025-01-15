@@ -5,13 +5,13 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#581C87",
+          "foreground": "#A855F7",
           "style": "plain",
           "template": "\ueb99 {{ .UserName }} on",
           "type": "session"
         },
         {
-          "foreground": "#0CA0D8",
+          "foreground": "#0EA5E9",
           "properties": {
             "folder_separator_icon": "/",
             "style": "full"
@@ -21,7 +21,7 @@
           "type": "path"
         },
         {
-          "foreground": "#14A5AE",
+          "foreground": "#14B8A6",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "fetch_stash_count": true,
@@ -39,13 +39,13 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#cd5e42",
+          "foreground": "#F97316",
           "style": "plain",
           "template": "\ue3bf ",
           "type": "root"
         },
         {
-          "foreground": "#CD4277",
+          "foreground": "#EC4899",
           "style": "plain",
           "template": "#- ",
           "type": "text"
