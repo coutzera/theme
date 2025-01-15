@@ -36,30 +36,6 @@
     },
     {
       "alignment": "left",
-      "segments": [
-        {
-          "foreground": "#0284C7",
-          "powerline_symbol": "\ue0b0",
-          "properties": {
-            "fetch_stash_count": true,
-            "fetch_upstream_icon": true
-          },
-          "style": "plain",
-          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
-          "type": "git"
-        },
-        {
-          "type": "docker",
-          "style": "powerline",
-          "powerline_symbol": "\uf308",
-          "foreground": "#FBBF24",
-          "template": "  {{ .Context }} "
-        }
-      ],
-      "type": "prompt"
-    },
-    {
-      "alignment": "left",
       "newline": true,
       "segments": [
         {
