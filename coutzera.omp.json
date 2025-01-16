@@ -30,13 +30,6 @@
           "style": "plain",
           "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
           "type": "git"
-        },
-        {
-          "type": "docker",
-          "style": "powerline",
-          "foreground": "#000000",
-          "background": "#0B59E7",
-          "template": "\uf308 {{ .Context }} "
         }
       ],
       "type": "prompt"
