@@ -32,10 +32,11 @@
           "type": "git"
         },
         {
-          "foreground": "#6CA35E",
+          "type": "node",
           "style": "powerline",
-          "template": "\ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
-          "type": "node"
+          "powerline_symbol": "",
+          "foreground": "#6CA35E",
+          "template": "{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} "
         }
       ],
       "type": "prompt"
