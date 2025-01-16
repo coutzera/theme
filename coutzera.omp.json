@@ -34,9 +34,8 @@
         {
           "type": "node",
           "style": "powerline",
-          "powerline_symbol": "",
           "foreground": "#6CA35E",
-          "template": "{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} "
+          "template": "  {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} "
         }
       ],
       "type": "prompt"
