@@ -5,105 +5,43 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#A855F7",
-          "style": "plain",
-          "template": "\ueb99 {{ .UserName }} on",
-          "type": "session"
-        },
-        {
-          "foreground": "#0EA5E9",
+          "foreground": "#15C2CB",
           "properties": {
-            "folder_separator_icon": "/",
-            "style": "full"
+            "style": "folder"
           },
           "style": "plain",
-          "template": " \uf07b {{ .Path }} ",
+          "template": "{{ .Path }} ",
           "type": "path"
         },
         {
-          "foreground": "#14B8A6",
-          "powerline_symbol": "\ue0b0",
+          "foreground": "#F141A8",
           "properties": {
-            "fetch_stash_count": true,
-            "fetch_upstream_icon": true
+            "branch_icon": "\ue0a0 "
           },
           "style": "plain",
-          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          "template": "<#F3EFF5>on</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
           "type": "git"
         },
         {
-          "type": "node",
-          "style": "powerline",
-          "foreground": "#6CA35E",
-          "template": " \uE71E {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} "
-        },
-        {
-          "type": "spotify",
-          "style": "powerline",
-          "powerline_symbol": "",
-          "foreground": "#ffffff",
-          "background": "#1BD760",
-          "properties": {
-            "playing_icon": "\uE602 ",
-            "paused_icon": "\uF8E3 ",
-            "stopped_icon": "\uF04D "
-          },
-          "template": "{{ .Icon }}{{ if ne .Status \"stopped\" }}{{ .Artist }} - {{ .Track }}{{ end }}"
-        }
-      ],
-      "type": "prompt"
-    },
-    {
-      "alignment": "right",
-      "segments": [
-        {
-          "foreground": "red",
+          "foreground": "#5EADF2",
           "style": "plain",
-          "template": "| root ",
-          "type": "root"
+          "template": "{{if .Version}}<#F3EFF5>is</> \uf487 {{.Version}} {{end}}",
+          "type": "project"
         },
         {
-          "foreground": "#06A4CE",
-          "style": "powerline",
-          "template": "| \ue798 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
-          "type": "dart"
-        },
-        {
-          "foreground": "#6CA35E",
-          "style": "powerline",
-          "template": "| \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "foreground": "#44FFD2",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "plain",
+          "template": "<#F3EFF5>via</> \ue718 {{ .Full }} ",
           "type": "node"
         },
         {
-          "foreground": "#4584b6",
-          "properties": {
-            "display_mode": "context",
-            "fetch_virtual_env": true
-          },
+          "foreground": "#FE4A49",
           "style": "plain",
-          "template": "| \ue235 {{ .Venv }} ",
-          "type": "python"
-        },
-        {
-          "foreground_templates": [
-            "{{if eq \"Charging\" .State.String}}#4caf50{{end}}",
-            "{{if eq \"Discharging\" .State.String}}#40c4ff{{end}}",
-            "{{if eq \"Full\" .State.String}}#ff0000{{end}}"
-          ],
-          "invert_powerline": true,
-          "properties": {
-            "charged_icon": "\uf00d ",
-            "charging_icon": "\ue234 "
-          },
-          "style": "powerline",
-          "template": "| {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }} \uf295 ",
-          "type": "battery"
-        },
-        {
-          "foreground": "lightGreen",
-          "style": "plain",
-          "template": "| {{ .CurrentDate | date .Format }} ",
-          "type": "time"
+          "template": "<#F3EFF5>and</> \ue71e {{.Full}} ",
+          "type": "npm"
         }
       ],
       "type": "prompt"
@@ -113,15 +51,9 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#F97316",
+          "foreground": "#FFE45E",
           "style": "plain",
-          "template": "\ue3bf ",
-          "type": "root"
-        },
-        {
-          "foreground": "#EC4899",
-          "style": "plain",
-          "template": "# ",
+          "template": "\u276f ",
           "type": "text"
         }
       ],
