@@ -5,7 +5,7 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#38bdf8",
+          "foreground": "#a78bfa",
           "style": "plain",
           "template": "{{ .UserName }}'s ",
           "type": "session"
@@ -29,7 +29,7 @@
           "type": "git"
         },
         {
-          "foreground": "#818cf8",
+          "foreground": "#e879f9",
           "properties": {
             "fetch_version": true
           },
@@ -44,14 +44,14 @@
       "alignment": "right",
       "segments": [
         {
-          "foreground": "#0ea5e9",
+          "foreground": "#c084fc",
           "style": "diamond",
           "template": "RAM:{{ (div ((sub .PhysicalTotalMemory .PhysicalAvailableMemory)|float64) 1073741824.0) }}/{{ (div .PhysicalTotalMemory 1073741824.0) }}GB ",
           "trailing_diamond": " ",
           "type": "sysinfo"
         },
         {
-          "foreground": "#67e8f9",
+          "foreground": "#f472b6",
           "leading_diamond": "\u250b",
           "properties": {
             "style": "roundrock",
@@ -69,7 +69,7 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#a5b4fc",
+          "foreground": "#fb7185",
           "style": "plain",
           "template": "\u2b9e ",
           "type": "text"
